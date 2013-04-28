@@ -28,7 +28,7 @@ print(lib.hour())
 lib.hello.restype = STRING
 print(lib.hello())
 
-code = STRING("hello")
+code = "hello"
 lib.eval.argtypes = [c_wchar_p]
 lib.eval.restype = STRING
 print (lib.eval(code))

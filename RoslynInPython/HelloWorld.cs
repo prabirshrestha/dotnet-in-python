@@ -28,7 +28,7 @@ namespace RoslynInPython
 
         [DllExport("eval", CallingConvention = CallingConvention.Cdecl)]
         [return: MarshalAs(UnmanagedType.BStr)]
-        static string eval(string code)
+        static string eval([MarshalAs(UnmanagedType.LPWStr)] string code)
         {
             return code;
             //var engine = new ScriptEngine();
