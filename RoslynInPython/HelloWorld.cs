@@ -1,6 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using RGiesecke.DllExport;
+using Roslyn.Compilers;
+using Roslyn.Scripting;
+using Roslyn.Scripting.CSharp;
 
 namespace RoslynInPython
 {
@@ -31,8 +37,8 @@ namespace RoslynInPython
         static string eval([MarshalAs(UnmanagedType.LPWStr)] string code)
         {
             return code;
-            //var engine = new ScriptEngine();
-            //return engine.CreateSession().Execute(code).ToString();
         }
+
+
     }
 }
